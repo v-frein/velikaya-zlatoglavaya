@@ -69,6 +69,7 @@ export const PurchaseForm: FC = () => {
                 date={values.date}
                 onDateChange={(date) => setFieldValue("date", date)}
               />
+              <Text>Стоимость: 1000 рублей</Text>
               <Button colorScheme="blue" type="submit">
                 Купить
               </Button>
