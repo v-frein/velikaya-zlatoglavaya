@@ -36,6 +36,7 @@ export const TourDescription: FC = () => {
         <ListItem>4. Храм Христа Спасителя</ListItem>
         <ListItem>5. Памятник Петру 1</ListItem>
       </List>
+      <Text>Длительность: 4 часа</Text>
       <Center>
         <Link href="/purchase">
           <Button colorScheme="blue">Купить билет</Button>
