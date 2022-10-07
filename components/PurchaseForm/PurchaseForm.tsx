@@ -22,12 +22,14 @@ import { SingleDatepicker } from "chakra-dayzed-datepicker";
 interface InitialValues {
   name: string;
   surname: string;
+  email: string;
   date: Date;
 }
 
 const initialValues: InitialValues = {
   name: "",
   surname: "",
+  email: "",
   date: new Date(),
 };
 
@@ -64,6 +66,11 @@ export const PurchaseForm: FC = () => {
                 name="surname"
                 onChange={handleChange}
               />
+              <Input
+                placeholder="Введите email"
+                name="email"
+                onChange={handleChange}
+              />
               <SingleDatepicker
                 name="date"
                 date={values.date}
@@ -86,8 +93,8 @@ export const PurchaseForm: FC = () => {
                       <Text>
                         Для возврата денежных средств просим вас написать письмо
                         на почту v.frein@mail.ru. В письме необоходимо указать
-                        ФИО и дану указанные при покупке билета, а так же
-                        реквезиты на которые вы хотите получить денежные
+                        ФИО и дату указанные при покупке билета, а так же
+                        реквизиты на которые вы хотите получить денежные
                         средства.
                       </Text>
                     </ModalBody>
@@ -99,7 +106,7 @@ export const PurchaseForm: FC = () => {
                 <Modal isOpen={isOpenRequisites} onClose={onCloseRequisites}>
                   <ModalOverlay />
                   <ModalContent>
-                    <ModalHeader>Реквезиты</ModalHeader>
+                    <ModalHeader>Реквизиты</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                       <Text>Организатор - ИП Фрейн Вячеслав Александрович</Text>
