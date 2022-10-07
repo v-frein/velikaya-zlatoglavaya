@@ -46,6 +46,12 @@ export const PurchaseForm: FC = () => {
     onClose: onCloseRequisites,
   } = useDisclosure();
 
+  const {
+    isOpen: isOpenRequisitess,
+    onOpen: onOpenRequisitess,
+    onClose: onCloseRequisitess,
+  } = useDisclosure();
+
   const onSubmitHandler = (values: InitialValues) => {
     console.log(values);
   };
@@ -113,6 +119,22 @@ export const PurchaseForm: FC = () => {
                       <Text>ИНН - 772098512338</Text>
                       <Text>ОГРНИП - 322774600207205</Text>
                       <Text>Регион - Город Москва</Text>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+                <Link color="gray.500" onClick={onOpenRequisitess}>
+                  График проведения
+                </Link>
+                <Modal isOpen={isOpenRequisitess} onClose={onCloseRequisitess}>
+                  <ModalOverlay />
+                  <ModalContent>
+                    <ModalHeader>График проведения</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                      <Text>
+                        Экскурсии проводятся каждый день с 12:00 до 16:00 по
+                        Московскому времени.
+                      </Text>
                     </ModalBody>
                   </ModalContent>
                 </Modal>
